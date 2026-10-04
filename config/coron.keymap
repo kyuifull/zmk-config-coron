@@ -23,14 +23,14 @@
            You will need to recalculate these indices later. */
 
         lang_e {
-            bindings = <&kp LANGUAGE_2>;
+            bindings = <&kp LANG2>;
             key-positions = <16 15>;
             layers = <0>;
             timeout-ms = <0>;
         };
 
         lang_j {
-            bindings = <&kp LANGUAGE_1>;
+            bindings = <&kp LANG1>;
             key-positions = <21 22>;
         };
 
