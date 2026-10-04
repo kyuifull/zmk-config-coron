@@ -1,0 +1,128 @@
+#include <dt-bindings/zmk/matrix_transform.h>
+#include <physical_layouts.dtsi>
+
+/ {
+    chosen {
+        zmk,physical-layout = &coron_v2_physical_layout;
+    };
+
+    coron_v2_physical_layout: coron_v2_physical_layout {
+        compatible = "zmk,physical-layout";
+        display-name = "Default";
+        transform = <&default_transform>;
+        kscan = <&kscan0>;
+
+        /* Derived from the PCB switch positions. 19 mm pitch = 100 units.
+           The order matches &default_transform, position for position. */
+        keys  //                    w    h     x     y     rot     rx     ry
+            = <&key_physical_attrs 100 100     0    65       0      0      0>  /* RC(0,6) */
+            , <&key_physical_attrs 100 100   108    65       0      0      0>  /* RC(0,0) */
+            , <&key_physical_attrs 100 100   216    27       0      0      0>  /* RC(0,1) */
+            , <&key_physical_attrs 100 100   324     0       0      0      0>  /* RC(0,2) */
+            , <&key_physical_attrs 100 100   432    14       0      0      0>  /* RC(0,3) */
+            , <&key_physical_attrs 100 100   540    27       0      0      0>  /* RC(0,4) */
+            , <&key_physical_attrs 100 100   974    52       0      0      0>  /* RC(0,7) */
+            , <&key_physical_attrs 100 100  1082    39       0      0      0>  /* RC(0,8) */
+            , <&key_physical_attrs 100 100  1190    25       0      0      0>  /* RC(0,9) */
+            , <&key_physical_attrs 100 100  1298    52       0      0      0>  /* RC(0,10) */
+            , <&key_physical_attrs 100 100  1406    90       0      0      0>  /* RC(0,11) */
+            , <&key_physical_attrs 100 100  1514    90       0      0      0>  /* RC(0,12) */
+            , <&key_physical_attrs 100 100     0   173       0      0      0>  /* RC(1,6) */
+            , <&key_physical_attrs 100 100   108   173       0      0      0>  /* RC(1,0) */
+            , <&key_physical_attrs 100 100   216   135       0      0      0>  /* RC(1,1) */
+            , <&key_physical_attrs 100 100   324   108       0      0      0>  /* RC(1,2) */
+            , <&key_physical_attrs 100 100   432   122       0      0      0>  /* RC(1,3) */
+            , <&key_physical_attrs 100 100   540   135       0      0      0>  /* RC(1,4) */
+            , <&key_physical_attrs 100 100   866   187       0      0      0>  /* RC(3,7) */
+            , <&key_physical_attrs 100 100   974   160       0      0      0>  /* RC(1,7) */
+            , <&key_physical_attrs 100 100  1082   147       0      0      0>  /* RC(1,8) */
+            , <&key_physical_attrs 100 100  1190   133       0      0      0>  /* RC(1,9) */
+            , <&key_physical_attrs 100 100  1298   160       0      0      0>  /* RC(1,10) */
+            , <&key_physical_attrs 100 100  1406   198       0      0      0>  /* RC(1,11) */
+            , <&key_physical_attrs 100 100  1514   198       0      0      0>  /* RC(1,12) */
+            , <&key_physical_attrs 100 100     0   281       0      0      0>  /* RC(2,6) */
+            , <&key_physical_attrs 100 100   108   281       0      0      0>  /* RC(2,0) */
+            , <&key_physical_attrs 100 100   216   243       0      0      0>  /* RC(2,1) */
+            , <&key_physical_attrs 100 100   324   216       0      0      0>  /* RC(2,2) */
+            , <&key_physical_attrs 100 100   432   230       0      0      0>  /* RC(2,3) */
+            , <&key_physical_attrs 100 100   540   243       0      0      0>  /* RC(2,4) */
+            , <&key_physical_attrs 100 100   648   270       0      0      0>  /* RC(2,5) */
+            , <&key_physical_attrs 100 100   866   295       0      0      0>  /* RC(3,8) */
+            , <&key_physical_attrs 100 100   974   268       0      0      0>  /* RC(2,7) */
+            , <&key_physical_attrs 100 100  1082   255       0      0      0>  /* RC(2,8) */
+            , <&key_physical_attrs 100 100  1190   241       0      0      0>  /* RC(2,9) */
+            , <&key_physical_attrs 100 100  1298   268       0      0      0>  /* RC(2,10) */
+            , <&key_physical_attrs 100 100  1406   306       0      0      0>  /* RC(2,11) */
+            , <&key_physical_attrs 100 100  1514   306       0      0      0>  /* RC(2,12) */
+            , <&key_physical_attrs 100 100     0   389       0      0      0>  /* RC(3,6) */
+            , <&key_physical_attrs 100 100   108   389       0      0      0>  /* RC(3,0) */
+            , <&key_physical_attrs 100 100   216   351       0      0      0>  /* RC(3,1) */
+            , <&key_physical_attrs 100 100   324   324       0      0      0>  /* RC(3,2) */
+            , <&key_physical_attrs 100 100   459   389       0      0      0>  /* RC(3,3) */
+            , <&key_physical_attrs 100 100   576   399    1000    626    449>  /* RC(3,4) */
+            , <&key_physical_attrs 100 100   689   429    2000    739    479>  /* RC(3,5) */
+            , <&key_physical_attrs 100 100   825   454 (-2000)    875    504>  /* RC(3,9) */
+            , <&key_physical_attrs 100 100   938   424 (-1000)    988    474>  /* RC(3,10) */
+            , <&key_physical_attrs 100 100  1406   414       0      0      0>  /* RC(3,11) */
+            , <&key_physical_attrs 100 100  1514   414       0      0      0>  /* RC(3,12) */
+            ;
+    };
+
+    default_transform: keymap_transform_0 {
+        compatible = "zmk,matrix-transform";
+        columns = <13>;
+        rows = <4>;
+        map = <
+/* Left: col 0-6                                  Right: col 7-12 (col-offset 7)
+   Row0/Col5 has no key, and Row1/Col5 is the rotary encoder, which is used
+   for rotation only - neither is part of the transform. */
+RC(0,6) RC(0,0) RC(0,1) RC(0,2) RC(0,3) RC(0,4)                 RC(0,7) RC(0,8) RC(0,9) RC(0,10) RC(0,11) RC(0,12)
+RC(1,6) RC(1,0) RC(1,1) RC(1,2) RC(1,3) RC(1,4)         RC(3,7) RC(1,7) RC(1,8) RC(1,9) RC(1,10) RC(1,11) RC(1,12)
+RC(2,6) RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5) RC(3,8) RC(2,7) RC(2,8) RC(2,9) RC(2,10) RC(2,11) RC(2,12)
+RC(3,6) RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(3,9) RC(3,10) RC(3,11)                         RC(3,12)
+        >;
+    };
+
+    kscan0: kscan {
+        compatible = "zmk,kscan-gpio-matrix";
+        diode-direction = "col2row";
+            row-gpios
+                = <&xiao_d 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+                , <&xiao_d 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+                , <&xiao_d 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+                , <&xiao_d 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+                ;
+    };
+
+    left_encoder: encoder_left {
+        compatible = "alps,ec11";
+        a-gpios = <&xiao_d 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&xiao_d 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        steps = <12>;
+        status = "disabled";
+    };
+
+    right_encoder: encoder_right {
+        status = "disabled";
+    };
+
+    sensors: sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&left_encoder &right_encoder>;
+        triggers-per-rotation = <10>;
+    };
+
+    trackball_listener: trackball_listener {
+        compatible = "zmk,input-listener";
+        status = "disabled";
+    };
+};
+
+&spi0 {
+    status = "disabled";
+
+    trackball: trackball@0 {
+        status = "disabled";
+        reg = <0>;
+    };
+};

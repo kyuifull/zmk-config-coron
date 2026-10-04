@@ -1,0 +1,28 @@
+if SHIELD_CORON_V2_R
+
+config ZMK_KEYBOARD_NAME
+    default "Coron"
+
+config ZMK_SPLIT
+    default y
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+config ZMK_POINTING
+    default y
+
+config PAW3222
+    default y
+
+endif
+
+if SHIELD_CORON_V2_L
+
+config ZMK_KEYBOARD_NAME
+    default "coron_L"
+
+config ZMK_SPLIT
+    default y
+
+endif

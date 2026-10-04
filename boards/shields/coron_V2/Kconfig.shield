@@ -1,0 +1,5 @@
+config SHIELD_CORON_V2_R
+    def_bool $(shields_list_contains,coron_V2_R)
+
+config SHIELD_CORON_V2_L
+    def_bool $(shields_list_contains,coron_V2_L)

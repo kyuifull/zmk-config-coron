@@ -1,4 +1,7 @@
 name: coron
 build:
+  cmake: drivers/paw3222
+  kconfig: drivers/paw3222/Kconfig
   settings:
     board_root: .
+    dts_root: drivers/paw3222
