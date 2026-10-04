@@ -26,7 +26,6 @@
             bindings = <&kp LANGUAGE_2>;
             key-positions = <16 15>;
             layers = <0>;
-            timeout-ms = <0>;
         };
 
         lang_j {
