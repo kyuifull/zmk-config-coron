@@ -23,15 +23,15 @@
            You will need to recalculate these indices later. */
 
         lang_e {
-            bindings = <&kp LANGUAGE_2>;
+            bindings = <&to_layer_0 LANGUAGE_2>;
             key-positions = <16 15>;
-            layers = <0>;
+            layers = <0 4>;
         };
 
         lang_j {
-            bindings = <&kp LANGUAGE_1>;
+            bindings = <&to_layer_0 LANGUAGE_1>;
             key-positions = <21 22>;
-            layers = <0>;
+            layers = <0 4>;
         };
 
         double_n {
