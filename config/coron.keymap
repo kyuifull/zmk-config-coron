@@ -140,33 +140,33 @@
         layer_1 {
             bindings = <
 &kp ESCAPE        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp BACKSPACE
-&kp CAPSLOCK      &kp F1        &kp F2        &kp F3        &kp F4        &kp F5        &kp LEFT_GUI  &trans        &kp F6        &kp F7        &kp F8        &kp F9         &kp F10  &trans
-&kp LEFT_SHIFT    &kp F11       &kp F12       &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans         &trans   &kp DELETE
-&kp LEFT_CONTROL  &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&kp CAPSLOCK      &kp F1        &kp F2        &kp F3        &kp F4        &kp F5        &kp LEFT_GUI  &none         &kp F6        &kp F7        &kp F8        &kp F9         &kp F10  &none
+&kp LEFT_SHIFT    &kp F11       &kp F12       &none         &none         &none         &none         &none         &none         &none         &none         &none          &none    &kp DELETE
+&kp LEFT_CONTROL  &none         &none         &none         &none         &none         &none         &none         &none         &none         &none
             >;
         };
 
         layer_2 {
             bindings = <
-&kp DOLLAR    &kp HASH       &kp DOUBLE_QUOTES  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp AT_SIGN     &kp HOME  &trans  &kp UP_ARROW  &trans          &kp PAGE_UP     &trans
-&bt BT_SEL 0  &kp AMPERSAND  &kp SINGLE_QUOTE   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE  &trans    &trans  &kp END       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PAGE_DOWN  &trans
-&bt BT_SEL 1  &kp COLON      &kp GRAVE          &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp TILDE       &trans    &trans  &trans        &trans          &trans          &trans           &trans         &bt BT_CLR
-&bt BT_SEL 2  &kp SEMICOLON  &trans             &trans                &trans                 &trans          &trans    &trans  &trans        &trans          &bt BT_CLR_ALL
+&kp DOLLAR    &kp HASH       &kp DOUBLE_QUOTES  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp AT_SIGN     &kp HOME  &none  &kp UP_ARROW  &none           &kp PAGE_UP     &sys_reset
+&bt BT_SEL 0  &kp AMPERSAND  &kp SINGLE_QUOTE   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE  &none     &none  &kp END       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PAGE_DOWN  &bootloader
+&bt BT_SEL 1  &kp COLON      &kp GRAVE          &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp TILDE       &none     &none  &none         &none           &none           &none            &none          &bt BT_CLR
+&bt BT_SEL 2  &kp SEMICOLON  &none              &none                 &none                  &none           &none     &none  &none         &none           &bt BT_CLR_ALL
             >;
         };
 
         layer_3 {
             bindings = <
-&kp ESCAPE        &trans  &trans  &trans  &trans        &trans  &kp ASTERISK  &kp PLUS      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp BACKSPACE
-&kp TAB           &trans  &trans  &trans  &trans        &trans  &trans        &trans        &kp SLASH        &kp MINUS        &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &tog 3
-&kp LEFT_SHIFT    &trans  &trans  &trans  &trans        &trans  &trans        &trans        &kp EQUAL        &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp BACKSLASH
-&kp LEFT_CONTROL  &trans  &trans  &trans  &kp LEFT_ALT  &trans  &kp SPACE     &kp KP_ENTER  &kp KP_DOT       &kp PERCENT      &kp PIPE
+&kp ESCAPE        &none  &none  &none  &none         &none  &kp ASTERISK  &kp PLUS      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp BACKSPACE
+&kp TAB           &none  &none  &none  &none         &none  &none         &none         &kp SLASH        &kp MINUS        &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &tog 3
+&kp LEFT_SHIFT    &none  &none  &none  &none         &none  &none         &none         &kp EQUAL        &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp BACKSLASH
+&kp LEFT_CONTROL  &none  &none  &none  &kp LEFT_ALT  &none  &kp SPACE     &kp KP_ENTER  &kp KP_DOT       &kp PERCENT      &kp PIPE
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_DOWN) LC(PAGE_UP)>;
         };
 
-        MOUSE {
+        layer_4 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans  &trans
@@ -175,7 +175,7 @@
             >;
         };
 
-        SCROLL {
+        layer_5 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
