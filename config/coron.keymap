@@ -148,10 +148,10 @@
 
         layer_2 {
             bindings = <
-&kp DOLLAR  &kp HASH       &kp DOUBLE_QUOTES  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp AT_SIGN     &kp HOME  &trans  &kp UP_ARROW  &trans          &kp PAGE_UP     &trans
-&trans      &kp AMPERSAND  &kp SINGLE_QUOTE   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE  &trans    &trans  &kp END       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PAGE_DOWN  &trans
-&trans      &kp COLON      &kp GRAVE          &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp TILDE       &trans    &trans  &trans        &trans          &trans          &trans           &trans         &trans
-&trans      &kp SEMICOLON  &trans             &trans                &trans                 &trans          &trans    &trans  &trans        &trans          &trans
+&kp DOLLAR    &kp HASH       &kp DOUBLE_QUOTES  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp AT_SIGN     &kp HOME  &trans  &kp UP_ARROW  &trans          &kp PAGE_UP     &trans
+&bt BT_SEL 0  &kp AMPERSAND  &kp SINGLE_QUOTE   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE  &trans    &trans  &kp END       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PAGE_DOWN  &trans
+&bt BT_SEL 1  &kp COLON      &kp GRAVE          &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp TILDE       &trans    &trans  &trans        &trans          &trans          &trans           &trans         &bt BT_CLR
+&bt BT_SEL 2  &kp SEMICOLON  &trans             &trans                &trans                 &trans          &trans    &trans  &trans        &trans          &bt BT_CLR_ALL
             >;
         };
 
