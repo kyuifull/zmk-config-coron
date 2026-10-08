@@ -37,6 +37,12 @@
             key-positions = <21 22>;
             layers = <0>;
         };
+
+        mo_6 {                      /* td_1 + td_2 held together */
+            bindings = <&mo 6>;
+            key-positions = <44 47>;
+            layers = <0 4>;
+        };
     };
 
     macros {
