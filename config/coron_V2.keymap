@@ -113,18 +113,57 @@
             bindings = <&kp QUESTION>, <&kp EXCLAMATION>;
         };
 
+        /* td_*: tap = key, hold = layer/modifier, tap then hold = key repeat
+           (hold-tap with quick-tap-ms). Usage: &td_1 <layer> <key>, etc. */
+
         td_1: td_1 {
-            compatible = "zmk,behavior-tap-dance";
+            compatible = "zmk,behavior-hold-tap";
             label = "TD_1";
-            #binding-cells = <0>;
-            bindings = <&mo 1>, <&kp LEFT_CONTROL>;
+            #binding-cells = <2>;
+            bindings = <&mo>, <&kp>;
+            flavor = "balanced";
+            tapping-term-ms = <150>;
+            quick-tap-ms = <150>;
         };
 
         td_2: td_2 {
-            compatible = "zmk,behavior-tap-dance";
+            compatible = "zmk,behavior-hold-tap";
             label = "TD_2";
-            #binding-cells = <0>;
-            bindings = <&lt 2 BACKSPACE>, <&kp RIGHT_SHIFT>;
+            #binding-cells = <2>;
+            bindings = <&mo>, <&kp>;
+            flavor = "balanced";
+            tapping-term-ms = <150>;
+            quick-tap-ms = <150>;
+        };
+
+        td_3: td_3 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TD_3";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+            flavor = "balanced";
+            tapping-term-ms = <150>;
+            quick-tap-ms = <150>;
+        };
+
+        td_space: td_space {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TD_SPACE";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+            flavor = "balanced";
+            tapping-term-ms = <150>;
+            quick-tap-ms = <150>;
+        };
+
+        td_enter: td_enter {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TD_ENTER";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+            flavor = "balanced";
+            tapping-term-ms = <150>;
+            quick-tap-ms = <150>;
         };
     };
 
@@ -136,7 +175,7 @@
 &kp ESC           &kp Q             &kp L              &kp U      &kp COMMA     &kp PERIOD  &kp F                   &kp W                  &lt 5 R  &kp Y      &kp P          &kp BACKSPACE
 &kp TAB  &kp E  &kp I  &kp A  &kp O  &td_minus  &kp RIGHT_SHIFT  &kp K  &kp T  &kp N  &kp S  &kp H  &tog 3
 &kp LEFT_SHIFT    &td_z             &td_x              &td_c      &td_v         &kp SLASH   &td_question            &kp RIGHT_CONTROL      &kp G    &kp D      &kp M          &kp J          &kp B  &kp DELETE
-&kp LEFT_CONTROL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp UNDER  &kp LEFT_ALT  &td_1       &mt LEFT_CONTROL SPACE  &mt RIGHT_SHIFT ENTER  &td_2    &kp COLON  &kp SEMICOLON
+&kp LEFT_CONTROL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp UNDER  &td_3 LEFT_ALT DELETE  &td_1 1 TAB  &td_space LEFT_CONTROL SPACE  &td_enter RIGHT_SHIFT ENTER  &td_2 2 BACKSPACE  &kp COLON  &kp SEMICOLON
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
